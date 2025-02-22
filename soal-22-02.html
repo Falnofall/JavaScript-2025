@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #000000;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: transparent;
+            color: black;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            margin: 20px;
+        }
+
+        .question {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .answer {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding: 15px;
+            background-color: #2a2a2a;
+            border-radius: 5px;
+            color: #e0e0e0;
+            font-family: 'Courier New', Courier, monospace;
+            border: 1px solid #444;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .explanation {
+            margin-left: 20px;
+            margin-top: 5px;
+            color: #000000;
+            font-family: Arial, sans-serif;
+        }
+
+        .code-block {
+            background-color: #2b2a2a;
+            border-left: 4px solid #444;
+            padding: 15px;
+            font-family: 'Courier New', Courier, monospace;
+            margin-top: 10px;
+            white-space: pre-wrap;
+            color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Belajar JavaScript: Pertanyaan dan Jawaban</h1>
+        <h1>Muhammad Naufal Radithya | XII RPL</h1>
+    </header>
+
+    <main>
+        <section>
+            <p class="question">1. Apa perbedaan utama antara <code>var</code>, <code>let</code>, dan <code>const</code> dalam JavaScript?</p>
+            <p class="answer">Jawaban: <code>var</code> dapat dideklarasikan ulang dan memiliki scope function.</p>
+            <div class="explanation"><strong>Penjelasan:</strong> <code>let</code> memiliki scope block, yang berarti hanya dapat diakses dalam blok tempat ia dideklarasikan. <code>const</code> bersifat tetap dan tidak dapat diubah setelah dideklarasikan.</div>
+        </section>
+
+        <section>
+            <p class="question">2. Apa output dari kode berikut?</p>
+            <div class="code-block">
+                var x = 10;
+                let y = 5;
+                const z = 20;
+                x = 15;
+                y = 10;
+                z = 25;
+                console.log(x, y, z);
+            </div>
+            <p class="answer">Jawaban: Error karena <code>z</code> tidak dapat diubah.</p>
+            <div class="explanation"><strong>Penjelasan:</strong> <code>const</code> digunakan untuk mendeklarasikan variabel yang tidak dapat diubah, sehingga mencoba untuk mengubah nilainya akan menghasilkan error.</div>
+        </section>
+
+        <section>
+            <p class="question">3. Perbaiki kode di atas agar tidak terjadi error!</p>
+            <div class="code-block">
+                var x = 10;
+                let y = 5;
+                const z = 20;
+                x = 15;
+                y = 10;
+                console.log(x, y, z);
+            </div>
+            <p class="answer">Jawaban: <code>z</code> tetap tidak bisa diubah, jadi tidak perlu diubah di sini.</p>
+            <div class="explanation"><strong>Penjelasan:</strong> Anda harus menggunakan <code>let</code> atau <code>var</code> jika Anda ingin mendeklarasikan variabel yang dapat diubah.</div>
+        </section>
+
+        <section>
+            <p class="question">4. Tentukan tipe data dari masing-masing variabel berikut:</p>
+            <div class="code-block">
+                let a = 'Hello';
+                let b = 42;
+                let c = true;
+                let d = [1, 2, 3];
+                let e = { name: 'Alice', age: 25 };
+            </div>
+            <p class="answer">Jawaban: String, Number, Boolean, Array, Object.</p>
+            <div class="explanation"><strong>Penjelasan:</strong> Tipe data ini digunakan untuk menyimpan berbagai jenis informasi dalam JavaScript.</div>
+        </section>
+
+        <section>
+            <p class="question">5. Buatlah sebuah array yang berisi 5 nama buah dan tampilkan elemen ketiga!</p>
+            <div class="code-block">
+                let buah = ['Apel', 'Jeruk', 'Mangga', 'Pisang', 'Durian'];
+                console.log(buah[2]);
+            </div>
+            <p class="answer">Jawaban: <code>Mangga</code>.</p>
+            <div class="explanation"><strong>Penjelasan:</strong> Elemen ketiga dalam array adalah <code>Mangga</code>, yang diakses menggunakan indeks 2 (indeks dimulai dari 0).</div>
+        </section>
+
+        <section>
+            <p class="question">6. Buatlah sebuah object yang berisi informasi nama, umur, dan pekerjaan seseorang, lalu tampilkan nilai dari properti nama.</p>
+            <div class="code-block">
+                let orang = {nama: 'Budi', umur: 25, pekerjaan: 'Programmer'};
+                console.log(orang.nama);
+            </div>
+            <p class="answer">Jawaban: <code>Budi</code>.</p>
+            <div class="explanation"><strong>Penjelasan:</strong> Nilai dari properti <code>nama</code> dalam objek <code>orang</code> adalah <code>Budi</code>.</div>
+        </section>
+
+        <section>
+            <p class="question">7. Apa hasil dari operasi berikut?</p>
+            <div class="code-block">
+                console.log(10 + '5');
+                console.log(10 - '5');
+                console.log(10 === '10');
+                console.log(10 == '10');
+                console.log(true && false);
+                console.log(true || false);
+                console.log(!true);
+            </div>
+            <p class="answer">Jawaban: 105, 5, false, true, false, true, false.</p>
+            <div class="explanation"><strong>Penjelasan:</strong> Operasi ini menunjukkan bagaimana JavaScript menangani tipe data yang berbeda dalam operasi aritmatika dan logika.</div>
+        </section>
+
+        <section>
+            <p class="question">8. Buat kode yang menggunakan operator perbandingan untuk mengecek apakah sebuah angka lebih besar dari 100 dan lebih kecil dari 500!</p>
+            <div class="code-block">
+                let num = 200;
+                console.log(num > 100 && num < 500);
+            </div>
+            <p class="answer">Jawaban: <code>true</code>.</p>
+            <div class="explanation"><strong>Penjelasan:</strong> Kode ini memeriksa apakah <code>num</code> lebih besar dari 100 dan lebih kecil dari 500, dan hasilnya adalah <code>true</code>.</div>
+        </section>
+
+        <section>
+            <p class="question">9. Buat program <code>if-else</code> untuk menentukan apakah sebuah angka ganjil atau genap.</p>
+            <div class="code-block">
+                let num = 10;
+                if (num % 2 === 0) {
+                    console.log('Genap');
+                } else {
+                    console.log('Ganjil');
+                }
+            </div>
+            <p class="answer">Jawaban: <code>Genap</code>.</p>
+            <div class="explanation"><strong>Penjelasan:</strong> Kode ini memeriksa apakah <code>num</code> habis dibagi 2, dan jika ya, maka hasilnya adalah <code>Genap</code>.</div>
+        </section>
+
+        <section>
+            <p class="question">10. Gunakan <code>switch-case</code> untuk mencetak nama hari berdasarkan nomor (1 = Senin, 2 = Selasa, ... 7 = Minggu).</p>
+            <div class="code-block">
+                let hari = 3;
+                switch(hari) {
+                    case 1:
+                        console.log('Senin');
+                        break;
+                    case 2:
+                        console.log('Selasa');
+                        break;
+                    case 3:
+                        console.log('Rabu');
+                        break;
+                    case 4:
+                        console.log('Kamis');
+                        break;
+                    case 5:
+                        console.log('Jumat');
+                        break;
+                    case 6:
+                        console.log('Sabtu');
+                        break;
+                    case 7:
+                        console.log('Minggu');
+                        break;
+                    default:
+                        console.log('Hari tidak valid');
+                }
+            </div>
+            <p class="answer">Jawaban: <code>Rabu</code>.</p>
+            <div class="explanation"><strong>Penjelasan:</strong> Kode ini menggunakan <code>switch-case</code> untuk mencetak nama hari berdasarkan nomor yang diberikan.</div>
+        </section>
+
+        <section>
+            <p class="question">11. Gunakan <code>for loop</code> untuk mencetak angka dari 1 hingga 10.</p>
+            <div class="code-block">
+                for (let i = 1; i <= 10; i++) {
+                    console.log(i);
+                }
+            </div>
+            <p class="answer">Jawaban: <code>1, 2, 3, 4, 5, 6, 7, 8, 9, 10</code>.</p>
+            <div class="explanation"><strong>Penjelasan:</strong> Kode ini mencetak angka dari 1 hingga 10 menggunakan <code>for loop</code>.</div>
+        </section>
+
+        <section>
+            <p class="question">12. Gunakan <code>while loop</code> untuk mencetak angka dari 10 hingga 1.</p>
+            <div class="code-block">
+                let i = 10;
+                while (i >= 1) {
+                    console.log(i);
+                    i--;
+                }
+            </div>
+            <p class="answer">Jawaban: <code>10, 9, 8, 7, 6, 5, 4, 3, 2, 1</code>. Ini adalah hasil dari perulangan yang mencetak angka dari 10 hingga 1 menggunakan <code>while loop</code>.</p>
+            <div class="explanation"><strong>Penjelasan:</strong> <code>while loop</code> akan terus menjalankan blok kode selama kondisi yang diberikan (dalam hal ini, <code>i >= 1</code>) adalah benar. Setiap iterasi, nilai <code>i</code> dikurangi 1 hingga mencapai 1.</div>
+        </section>
+
+        <section>
+            <p class="question">13. Gunakan <code>do-while loop</code> untuk mencetak angka dari 1 hingga 5.</p>
+            <div class="code-block">
+                let i = 1;
+                do {
+                    console.log(i);
+                    i++;
+                } while (i <= 5);
+            </div>
+            <p class="answer">Jawaban: <code>1, 2, 3, 4, 5</code>. Ini adalah hasil dari perulangan yang mencetak angka dari 1 hingga 5 menggunakan <code>do-while loop</code>.</p>
+            <div class="explanation"><strong>Penjelasan:</strong> <code>do-while loop</code> akan menjalankan blok kode setidaknya sekali sebelum memeriksa kondisi. Dalam hal ini, <code>i</code> akan terus bertambah 1 hingga mencapai 6.</div>
+        </section>
+    </main>
+
+</body>
+</html>
